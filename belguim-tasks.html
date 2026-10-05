@@ -37,10 +37,10 @@
             margin-bottom: 10px;
         }
         .timer {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            letter-spacing: 1px;
-            direction: ltr;
+            direction: rtl; /* إصلاح الاتجاه ليعرض الرقم ثم الكلمة */
+            unicode-bidi: isolate;
         }
         table {
             width: 100%;
@@ -66,6 +66,11 @@
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.85rem;
+            display: inline-block;
+        }
+        .date-cell {
+            direction: ltr;
+            text-align: right;
         }
     </style>
 </head>
@@ -120,12 +125,11 @@
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-        // تنسيق العرض
+        // تنسيق العرض بالترتيب الصحيح (الرقم ثم الوحدة)
         document.getElementById("countdown").innerText = 
-            `${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
+            `${days} يوم : ${hours} ساعة : ${minutes} دقيقة : ${seconds} ثانية`;
     }
 
-    // تشغيل العداد فوراً وتحديثه كل ثانية
     updateCountdown();
     setInterval(updateCountdown, 1000);
 </script>
