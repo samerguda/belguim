@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول الأعمال  هارلبيكة </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+
+        /* كارت العداد التنازلي */
+        .countdown-card {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+        }
+
+        .countdown-card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #94a3b8;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            direction: ltr; /* لعرض الأرقام بالترتيب الصحيح */
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+
+        .time-box .number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #38bdf8;
+            display: block;
+        }
+
+        .time-box .label {
+            font-size: 0.75rem;
+            color: #cbd5e1;
+            text-transform: uppercase;
+        }
+
+        /* تصميم الجدول */
+        .table-container {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th, td {
+            padding: 15px 20px;
+        }
+
+        th {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .badge {
+            background-color: #dbeafe;
+            color: #1e40af;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>جدول الأعمال والمواعيد</h1>
+
+    <!-- العداد التنازلي -->
+    <div class="countdown-card">
+        <h2>الوقت المتبقي على موعد: <span style="color: #38bdf8;">سخون ماكن</span></h2>
+        <div class="countdown-timer">
+            <div class="time-box">
+                <span class="number" id="days">00</span>
+                <span class="label">يوم</span>
+            </div>
+            <div class="time-box">
+                <span class="number" id="hours">00</span>
+                <span class="label">ساعة</span>
+            </div>
+            <divالكود التالي بصفحة HTML كاملة يحتوي على الجدول المطلوب مع عداد تنازلي حركي (Dynamic Countdown) يحسب الوقت المتبقي تلقائياً بالثواني والدقائق والساعات والأيام حتى موعد العمل.
+
+يمكنك نسخ الكود وحفظه بصيغة `index.html` وفتحه في أي متصفح:
+
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول الأعمال والعد التنازلي</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 20px;
+            direction: rtl;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .countdown-box {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .countdown-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .timer {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            direction: ltr;
