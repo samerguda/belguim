@@ -3,148 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>جدول الأعمال  هارلبيكة </title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-
-        /* كارت العداد التنازلي */
-        .countdown-card {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            margin-bottom: 30px;
-        }
-
-        .countdown-card h2 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #94a3b8;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            direction: ltr; /* لعرض الأرقام بالترتيب الصحيح */
-        }
-
-        .time-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 8px;
-            min-width: 70px;
-        }
-
-        .time-box .number {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #38bdf8;
-            display: block;
-        }
-
-        .time-box .label {
-            font-size: 0.75rem;
-            color: #cbd5e1;
-            text-transform: uppercase;
-        }
-
-        /* تصميم الجدول */
-        .table-container {
-            background: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: right;
-        }
-
-        th, td {
-            padding: 15px 20px;
-        }
-
-        th {
-            background-color: #2563eb;
-            color: #ffffff;
-            font-weight: 600;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        tr:hover {
-            background-color: #f1f5f9;
-        }
-
-        .badge {
-            background-color: #dbeafe;
-            color: #1e40af;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>جدول الأعمال والمواعيد</h1>
-
-    <!-- العداد التنازلي -->
-    <div class="countdown-card">
-        <h2>الوقت المتبقي على موعد: <span style="color: #38bdf8;">سخون ماكن</span></h2>
-        <div class="countdown-timer">
-            <div class="time-box">
-                <span class="number" id="days">00</span>
-                <span class="label">يوم</span>
-            </div>
-            <div class="time-box">
-                <span class="number" id="hours">00</span>
-                <span class="label">ساعة</span>
-            </div>
-            <divالكود التالي بصفحة HTML كاملة يحتوي على الجدول المطلوب مع عداد تنازلي حركي (Dynamic Countdown) يحسب الوقت المتبقي تلقائياً بالثواني والدقائق والساعات والأيام حتى موعد العمل.
-
-يمكنك نسخ الكود وحفظه بصيغة `index.html` وفتحه في أي متصفح:
-
-```html
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جدول الأعمال والعد التنازلي</title>
     <style>
         body {
@@ -183,3 +41,94 @@
             font-weight: bold;
             letter-spacing: 1px;
             direction: ltr;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 14px 16px;
+            text-align: right;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        .badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>جدول الأعمال والتكليفات</h2>
+
+    <!-- مربع العد التنازلي الديناميكي -->
+    <div class="countdown-box">
+        <div class="countdown-title">الوقت المتبقي على ميعاد العمل (سخون ماكن):</div>
+        <div id="countdown" class="timer">جاري التحميل...</div>
+    </div>
+
+    <!-- جدول الأعمال -->
+    <table>
+        <thead>
+            <tr>
+                <th>طبيعة العمل</th>
+                <th>اليوم والتاريخ</th>
+                <th>الموعد</th>
+                <th>الموقع</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge">سخون ماكن</span></td>
+                <td>الاثنين 12-10-2026</td>
+                <td>02:30 مساءً</td>
+                <td>الموقع المحدد للعمل</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // موعد العمل: الاثنين 12 أكتوبر 2026 الساعة 14:30 (2:30 مساءً)
+    const targetDate = new Date(2026, 9, 12, 14, 30, 0).getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference <= 0) {
+            document.getElementById("countdown").innerText = "حان الآن موعد العمل!";
+            return;
+        }
+
+        // حساب الأيام والساعات والدقائق والثواني
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // تنسيق العرض
+        document.getElementById("countdown").innerText = 
+            `${days} يوم - ${hours} ساعة - ${minutes} دقيقة - ${seconds} ثانية`;
+    }
+
+    // تشغيل العداد فوراً وتحديثه كل ثانية
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
