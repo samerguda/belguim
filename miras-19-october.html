@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajectgesprek - CVO MIRAS 19/10/2026  3:30 pm </title>
+    <!-- استيراد خطوط وتنسيقات Tailwind CSS لتصميم سريع وجميل -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- الهيدر -->
+    <header class="bg-indigo-900 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-2xl font-bold tracking-wide">NT2 Kortrijk - CVO MIRAS</h1>
+            <p class="text-indigo-200 text-sm mt-1">Bevestiging van uw afspraak (Trajectgesprek)</p>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container mx-auto px-4 py-8 max-w-2xl flex-grow">
+        
+        <!-- بطاقة العداد التنازلي -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-slate-100 text-center">
+            <h2 class="text-lg font-semibold text-slate-700 mb-4 flex items-center justify-center gap-2">
+                <i class="fa-regular fa-clock text-indigo-600"></i> الوقت المتبقي للموعد
+            </h2>
+            <div id="countdown" class="grid grid-cols-4 gap-3 max-w-md mx-auto mb-4">
+                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                    <span id="days" class="text-3xl font-bold text-indigo-700 block">00</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">أيام</span>
+                </div>
+                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                    <span id="hours" class="text-3xl font-bold text-indigo-700 block">00</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">ساعات</span>
+                </div>
+                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                    <span id="minutes" class="text-3xl font-bold text-indigo-700 block">00</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">دائق</span>
+                </div>
+                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                    <span id="seconds" class="text-3xl font-bold text-indigo-700 block">00</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">ثواني</span>
+                </div>
+            </div>
+            <p id="event-status" class="text-sm font-medium text-slate-600">الموعد: الإثنين 19 أكتوبر 2026 الساعة 15:30</p>
+        </div>
+
+        <!-- تفاصيل المقابلة -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-slate-100 space-y-4">
+            <h3 class="text-lg font-bold text-slate-800 border-b pb-2 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info text-indigo-600"></i> تفاصيل الحجز
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <span class="text-slate-500 block font-medium">المسؤولة:</span>
+                    <span class="text-slate-800 font-semibold">Inne Tack</span>
+                </div>
+                <div>
+                    <span class="text-slate-500 block font-medium">المكان:</span>
+                    <span class="text-slate-800 font-semibold">Nelson Mandelaplein 1, 8500 Kortrijk</span>
+                </div>
+            </div>
+
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-4 text-xs text-amber-800 rounded-r-lg mt-4">
+                <p class="font-bold mb-1">تعليمات هامة:</p>
+                <p>يرجى الحضور في الوقت المحدد، وإحضار بطاقة الهوية الشخصية (ID) وشهادات اللغة الهولندية السابقة معك.</p>
+            </div>
+        </div>
+
+        <!-- أزرار التواصل والإجراءات -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 border border-slate-100">
+            <h3 class="text-lg font-bold text-slate-800 mb-4 text-center">أزرار التواصل والخدمات السريعة</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- زر إرسال إيميل لـ Inne -->
+                <a href="mailto:inne.tack@miras.be" class="flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-xl transition shadow-sm">
+                    <i class="fa-solid fa-envelope"></i> مراسلة Inne Tack
+                </a>
+                <!-- زر إرسال إيميل لـ Aljosha -->
+                <a href="mailto:aljosha.meerhaeghe@miras.be" class="flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white font-medium py-3 px-4 rounded-xl transition shadow-sm">
+                    <i class="fa-solid fa-envelope"></i> مراسلة Aljosha
+                </a>
+                <!-- زر فتح الخريطة -->
+                <a href="https://maps.google.com/?q=Nelson+Mandelaplein+1+8500+Kortrijk" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-xl transition shadow-sm">
+                    <i class="fa-solid fa-map-location-dot"></i> موقع المقابلة (خرائط جوجل)
+                </a>
+                <!-- زر موقع المدرسة -->
+                <a href="https://www.miras.be/" target="_blank" class="flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-medium py-3 px-4 rounded-xl transition shadow-sm">
+                    <i class="fa-solid fa-globe"></i> زيارة موقع CVO Miras
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="bg-white border-t py-4 text-center text-xs text-slate-500">
+        <p>Beste Samer Alsaadni - Uw reservering is bevestigd.</p>
+    </footer>
+
+    <!-- سكربت العداد التنازلي -->
+    <script>
+        // تحديد موعد المقابلة: 19 أكتوبر 2026 الساعة 15:30 (توقيت بلجيكا UTC+1)
+        const eventDate = new Date("October 19, 2026 15:30:00").getTime();
+
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-red-600 font-bold text-lg'>لقد وُقت هذا الموعد أو بدأ بالفعل!</div>";
+                document.getElementById("event-status").innerText = "وقت الموعد قد حان.";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
