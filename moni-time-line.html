@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قصتنا معًا | Our Love Story</title>
+
+<style>
+:root {
+  --primary: #9f365b;
+  --secondary: #e9a5b8;
+  --bg: #fff7f9;
+  --text: #382630;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+}
+
+.hero {
+  text-align: center;
+  padding: 65px 20px 55px;
+  color: white;
+  background: linear-gradient(135deg, #6e203e, #c65b7c, #edb4c5);
+}
+
+.hero .heart {
+  font-size: 48px;
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(27px, 5vw, 43px);
+}
+
+.hero p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
+
+.intro {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 35px;
+  box-shadow: 0 5px 22px #7d29400d;
+}
+
+.intro h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.timeline {
+  position: relative;
+  padding: 10px 28px 10px 0;
+  margin-right: 12px;
+  border-right: 3px solid var(--secondary);
+}
+
+.event {
+  position: relative;
+  background: var(--card);
+  padding: 20px 22px;
+  margin: 0 0 24px;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px #6e203e0d;
+  border: 1px solid #f6e5eb;
+  transition: transform .2s;
+}
+
+.event:hover {
+  transform: translateY(-3px);
+}
+
+.event::before {
+  content: "♥";
+  position: absolute;
+  right: -43px;
+  top: 23px;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 13px;
+  border: 4px solid var(--bg);
+}
+
+.date {
+  display: inline-block;
+  background: #fbe8ee;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 7px;
+}
+
+.event h3 {
+  margin: 3px 0 5px;
+  color: var(--primary);
+  font-size: 19px;
+}
+
+.event p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.highlight {
+  border: 2px solid var(--secondary);
+  background: linear-gradient(135deg, #fff, #fff0f4);
+}
+
+.future {
+  border: 2px dashed var(--primary);
+  background: #fff0f4;
+}
+
+.footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: white;
+  background: #6e203e;
+}
+
+.footer .heart {
+  font-size: 30px;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0 40px;
+}
+
+button {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #76223f;
+}
+
+@media print {
+  .buttons {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .event {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .hero, .footer {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="heart">❤️</div>
+  <h1>قصتنا معًا</h1>
+  <p>Our Love Story</p>
+  <p>من أول لقاء إلى بداية حياتنا الزوجية</p>
+  <p>2023 — 2026</p>
+</header>
+
+<main class="container">
+
+  <section class="intro">
+    <h2>حكاية حب وعائلة</h2>
+    <p>
+      بدأت قصتنا في مارس 2023، ومع مرور الوقت كبرت علاقتنا،
+      والتقينا في بلدان مختلفة، وتعرّفنا على العائلة،
+      وشاركنا لحظات جميلة، حتى وصلنا إلى مرحلة بناء مستقبلنا معًا.
+    </p>
+  </section>
+
+  <section class="timeline">
+
+    <article class="event">
+      <span class="date">مارس 2023</span>
+      <h3>❤️ بداية التعارف</h3>
+      <p>بدأت قصتنا وتعرّفنا على بعضنا البعض، وكانت بداية رحلة مميزة في حياتنا.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">أبريل 2023</span>
+      <h3>🇧🇪 أول لقاء في بلجيكا</h3>
+      <p>التقينا في بلجيكا، وبدأت علاقتنا تأخذ خطوة جديدة إلى الأمام.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">سبتمبر 2023</span>
+      <h3>🇪🇸 لقاء مدريد</h3>
+      <p>اجتمعنا في مدريد بإسبانيا، وصنعنا ذكريات جميلة معًا.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">سبتمبر 2024</span>
+      <h3>👨‍👩‍👧‍👦 لقاء العائلة</h3>
+      <p>بدأت مرحلة التعارف بين العائلتين، وأصبحت علاقتنا أكثر جدية.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">16 يناير — السنة تحتاج إلى تأكيد</span>
+      <h3>🏡 مرحلة جديدة معًا</h3>
+      <p>تم ذكر تاريخ 16 يناير ضمن ذكرياتنا. نحتاج إلى تأكيد السنة والحدث المرتبط بهذا التاريخ.</p>
+    </article>
+
+    <article class="event highlight">
+      <span class="date">فبراير 2025</span>
+      <h3>💍 الزواج</h3>
+      <p>بدأ فصل جديد في حياتنا الزوجية، وتوّجنا علاقتنا بالزواج.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">30 مارس 2025</span>
+      <h3>🌙 العيد مع العائلة</h3>
+      <p>قضينا العيد مع العائلة، وشاركنا لحظات جميلة مليئة بالمحبة.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">عام 2025</span>
+      <h3>🏠 عشنا معًا</h3>
+      <p>شاركنا حياتنا اليومية، وتحملنا المسؤوليات، وبدأنا نبني مستقبلنا كعائلة.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">يناير 2025 — التاريخ يحتاج إلى تأكيد</span>
+      <h3>🚗 رحلة إلى هولندا وألمانيا</h3>
+      <p>سافرنا معًا إلى هولندا وألمانيا. تم ذكر يوم 8 يناير، لكن السنة تحتاج إلى تأكيد.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">يوليو 2025</span>
+      <h3>🇫🇷 رحلة فرنسا مع العائلة</h3>
+      <p>سافرنا إلى فرنسا مع العائلة وقضينا أوقاتًا جميلة معًا.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">ديسمبر 2025</span>
+      <h3>📄 تقديم طلب السكن المشترك</h3>
+      <p>بدأنا الإجراءات الرسمية المتعلقة بالسكن المشترك (Samenwonen).</p>
+    </article>
+
+    <article class="event">
+      <span class="date">يناير 2026</span>
+      <h3>🪪 استلام البطاقة البرتقالية</h3>
+      <p>استلمت البطاقة البرتقالية (Orange Card) في بلجيكا.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">يناير 2026</span>
+      <h3>📚 التقدم في اللغة الهولندية</h3>
+      <p>أنهيت المستوى الأول NT2 (Niveau 1)، وأكملت معظم المستوى الثاني (Niveau 2).</p>
+    </article>
+
+    <article class="event">
+      <span class="date">27 يناير 2026</span>
+      <h3>🇪🇸 رحلة إسبانيا</h3>
+      <p>سافرنا إلى إسبانيا وصنعنا ذكريات جديدة معًا.</p>
+    </article>
+
+    <article class="event">
+      <span class="date">يوليو 2026</span>
+      <h3>📑 تقديم الملف الرسمي</h3>
+      <p>قدّمنا ملف الزواج الرسمي إلى الجهات المختصة في بلجيكا.</p>
+    </article>
+
+    <article class="event highlight">
+      <span class="date">سبتمبر 2026</span>
+      <h3>✅ الموافقة الرسمية</h3>
+      <p>تمت الموافقة على الملف، وأصبحنا أقرب إلى إتمام الزواج المدني رسميًا.</p>
+    </article>
+
+    <article class="event future">
+      <span class="date">31 أكتوبر 2026</span>
+      <h3>💒 موعد الزواج المدني</h3>
+      <p>
+        موعدنا المنتظر في بلدية هارلبِيك (Harelbeke)، بلجيكا.
+        يوم مميز نحتفل فيه بعلاقتنا وبداية فصل جديد من حياتنا معًا.
+      </p>
+    </article>
+
+  </section>
+
+  <div class="buttons">
+    <button onclick="window.print()">🖨️ طباعة القصة / حفظ PDF</button>
+    <button onclick="shareStory()">📤 مشاركة القصة</button>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="heart">❤️ ♾️ ❤️</div>
+  <p><strong>كل خطوة كانت جزءًا من حكايتنا.</strong></p>
+  <p>من 2023 إلى مستقبل نصنعه معًا.</p>
+  <p>Made with Love</p>
+</footer>
+
+<script>
+async function shareStory() {
+  const data = {
+    title: "قصتنا معًا",
+    text: "قصتنا معًا ❤️ من أول لقاء في 2023 إلى موعد الزواج المدني في 31 أكتوبر 2026."
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(data);
+    } catch (error) {
+      // أغلق المستخدم نافذة المشاركة
+    }
+  } else {
+    try {
+      await navigator.clipboard.writeText(
+        data.title + "\n" + data.text
+      );
+      alert("تم نسخ نص القصة. يمكنك مشاركته الآن.");
+    } catch (error) {
+      alert("استخدم زر الطباعة لحفظ القصة بصيغة PDF.");
+    }
+  }
+}
+</script>
+
+</body>
+</html>
