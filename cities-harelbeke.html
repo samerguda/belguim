@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدن المحيطة بـ Harelbeke | هارلبكة - بلجيكا</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f4f7fb 0%, #e6ecf3 100%);
+            font-family: 'Segoe UI', Tahoma, 'Cairo', 'Noto Kufi Arabic', system-ui, sans-serif;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+            color: #1a2b3c;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            border-radius: 3rem 3rem 2rem 2rem;
+            box-shadow: 0 25px 40px -15px rgba(0, 20, 30, 0.3);
+            padding: 2rem 1.8rem 2.5rem;
+            border: 1px solid #ffffffaa;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: #1e4a6b;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.35rem 1.2rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 6px 12px -6px #1e4a6b;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: #0d2e42;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+
+        h1 span {
+            background: #f2b84b;
+            color: #0d2e42;
+            font-size: 1.2rem;
+            padding: 0.3rem 1.1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 8px -4px #b37b1a;
+        }
+
+        .subhead {
+            font-size: 1.15rem;
+            color: #2e4d63;
+            margin-bottom: 2rem;
+            border-right: 6px solid #f2b84b;
+            padding-right: 1.2rem;
+            background: #ffffffd0;
+            border-radius: 0 2rem 2rem 0;
+            padding: 0.7rem 1.2rem;
+            display: inline-block;
+            box-shadow: 0 2px 6px #00000008;
+        }
+
+        .grid-legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+            font-size: 0.9rem;
+            color: #385e77;
+        }
+
+        .grid-legend i {
+            font-style: normal;
+            background: #d9e4ee;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .grid-legend i::before {
+            content: "📍";
+            font-size: 0.9rem;
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .city-card {
+            background: #ffffff;
+            border-radius: 2rem;
+            padding: 1.2rem 1.5rem 1.3rem;
+            box-shadow: 0 10px 20px -12px #1a2e3b40, 0 0 0 1px #ffffff inset, 0 0 0 1px #ced9e2;
+            transition: transform 0.2s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+            border-right: 6px solid #f2b84b;
+        }
+
+        .city-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 28px -16px #1a2e3b70, 0 0 0 1px #e0e9f0;
+        }
+
+        .city-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #11364c;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .city-name .arabic {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0f435c;
+            background: #ecf3f8;
+            padding: 0.1rem 0.9rem;
+            border-radius: 40px;
+            line-height: 1.5;
+        }
+
+        .distance-badge {
+            background: #1e4a6b;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            white-space: nowrap;
+            margin: 0.4rem 0 0.5rem;
+            align-self: flex-start;
+            box-shadow: 0 3px 8px -3px #0e2b3b;
+            letter-spacing: 0.3px;
+        }
+
+        .city-note {
+            color: #2f536b;
+            font-size: 0.96rem;
+            padding-top: 0.5rem;
+            border-top: 1px dashed #cbd9e4;
+            margin-top: 0.5rem;
+        }
+
+        .note-highlight {
+            background: #fef7e9;
+            padding: 0.1rem 0.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+            color: #6b4e1b;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f3349;
+            margin: 2.5rem 0 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 3px solid #f2b84b;
+            padding-bottom: 0.5rem;
+            width: fit-content;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: "🏙️";
+            font-size: 1.8rem;
+        }
+
+        .big-cities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .big-city-item {
+            background: #10364e;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 12px -8px #02141f;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: 0.15s;
+        }
+
+        .big-city-item .km {
+            background: #f2b84b;
+            color: #0d2e42;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+        }
+
+        .advice-box {
+            background: #ffffffdb;
+            border: 2px solid #f2b84b;
+            border-radius: 2rem;
+            padding: 1.8rem 2rem;
+            margin-top: 2.5rem;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 18px 28px -20px #1e3e55;
+            position: relative;
+        }
+
+        .advice-box::before {
+            content: "💡";
+            font-size: 2.5rem;
+            position: absolute;
+            top: -1rem;
+            right: 2rem;
+            background: #f2b84b;
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 14px -4px #ad7a1a;
+        }
+
+        .advice-box h3 {
+            font-size: 1.4rem;
+            color: #0d2e42;
+            margin-bottom: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .advice-box p {
+            font-size: 1.1rem;
+            background: #ecf3f8;
+            padding: 1rem 1.4rem;
+            border-radius: 1.5rem;
+            color: #0d2e42;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .advice-box strong {
+            color: #135b83;
+            background: #ffffff;
+            padding: 0.1rem 0.5rem;
+            border-radius: 8px;
+        }
+
+        .footnote {
+            font-size: 0.85rem;
+            color: #59748b;
+            margin-top: 2.2rem;
+            text-align: center;
+            border-top: 1px solid #cfdee9;
+            padding-top: 1.2rem;
+        }
+
+        .footnote a {
+            color: #1e4a6b;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px dotted #1e4a6b;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .city-name {
+                font-size: 1.3rem;
+            }
+            .city-name .arabic {
+                font-size: 1.1rem;
+            }
+            .big-city-item {
+                font-size: 1rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-badge">📍 مقاطعة غرب فلاندرز • بلجيكا</div>
+        <h1>
+            Harelbeke <span>هارلبكة</span>
+        </h1>
+        <div class="subhead">
+            أهم المدن والبلدات المحيطة، مرتبة تقريبًا حسب المسافة من مركز هارلبكة
+        </div>
+
+        <!-- أقرب المدن والبلدات -->
+        <div class="section-title">أقرب المدن والبلدات</div>
+
+        <div class="city-grid">
+            <!-- Kuurne -->
+            <div class="city-card">
+                <div class="city-name">
+                    Kuurne <span class="arabic">كورن</span>
+                </div>
+                <div class="distance-badge">1 – 3 كم</div>
+                <div class="city-note">
+                    بلدة قريبة جدًا من هارلبكة، تكاد تكون ملتصقة بها.
+                </div>
+            </div>
+
+            <!-- Kortrijk -->
+            <div class="city-card">
+                <div class="city-name">
+                    Kortrijk <span class="arabic">كورتريك</span>
+                </div>
+                <div class="distance-badge">4 – 5 كم</div>
+                <div class="city-note">
+                    مدينة مهمة للتسوق والعمل والمواصلات. مركز اقتصادي رئيسي في المنطقة.
+                </div>
+            </div>
+
+            <!-- Deerlijk -->
+            <div class="city-card">
+                <div class="city-name">
+                    Deerlijk <span class="arabic">ديرليك</span>
+                </div>
+                <div class="distance-badge">3 – 4 كم</div>
+                <div class="city-note">
+                    بلدة صغيرة هادئة وقريبة جدًا من هارلبكة.
+                </div>
+            </div>
+
+            <!-- Zwevegem -->
+            <div class="city-card">
+                <div class="city-name">
+                    Zwevegem <span class="arabic">زفيفخم</span>
+                </div>
+                <div class="distance-badge">5 – 6 كم</div>
+                <div class="city-note">
+                    بلدة معروفة صناعيًا، قريبة من قناة Leie.
+                </div>
+            </div>
+
+            <!-- Lendelede -->
+            <div class="city-card">
+                <div class="city-name">
+                    Lendelede <span class="arabic">لينديليده</span>
+                </div>
+                <div class="distance-badge">~ 6 كم</div>
+                <div class="city-note">
+                    بلدة صغيرة تقع شمال هارلبكة.
+                </div>
+            </div>
+
+            <!-- Waregem -->
+            <div class="city-card">
+                <div class="city-name">
+                    Waregem <span class="arabic">وارهِم</span>
+                </div>
+                <div class="distance-badge">~ 10 كم</div>
+                <div class="city-note">
+                    مدينة نشطة اقتصاديًا، بها فرص عمل متنوعة.
+                </div>
+            </div>
+
+            <!-- Wevelgem -->
+            <div class="city-card">
+                <div class="city-name">
+                    Wevelgem <span class="arabic">ويفلخِم</span>
+                </div>
+                <div class="distance-badge">~ 10 كم</div>
+                <div class="city-note">
+                    قريبة من مطار كورتريك-ويڤلخِم، مناسبة للعمل في مجال الطيران واللوجستيك.
+                </div>
+            </div>
+
+            <!-- Izegem -->
+            <div class="city-card">
+                <div class="city-name">
+                    Izegem <span class="arabic">إيزخم</span>
+                </div>
+                <div class="distance-badge">~ 10 كم</div>
+                <div class="city-note">
+                    مدينة الصناعة والأحذية، بها فرص عمل في التصنيع.
+                </div>
+            </div>
+
+            <!-- Ingelmunster -->
+            <div class="city-card">
+                <div class="city-name">
+                    Ingelmunster <span class="arabic">إنخل مونستر</span>
+                </div>
+                <div class="distance-badge">~ 8 كم</div>
+                <div class="city-note">
+                    بلدة ذات طابع تاريخي وجميلة، قريبة من الطريق السريع E17.
+                </div>
+            </div>
+
+            <!-- Roeselare -->
+            <div class="city-card">
+                <div class="city-name">
+                    Roeselare <span class="arabic">روسيلاره</span>
+                </div>
+                <div class="distance-badge">~ 17 كم</div>
+                <div class="city-note">
+                    مدينة كبيرة نسبيًا، مركز تجاري وخدمي مهم في غرب فلاندرز.
+                </div>
+            </div>
+        </div>
+
+        <!-- مدن أكبر قريبة نسبيًا -->
+        <div class="section-title">مدن أكبر قريبة نسبيًا</div>
+
+        <div class="big-cities">
+            <div class="big-city-item">
+                Gent <span class="arabic" style="font-weight:400;">خنت</span>
+                <span class="km">~ 37 كم</span>
+            </div>
+            <div class="big-city-item">
+                Brugge <span class="arabic" style="font-weight:400;">بروج</span>
+                <span class="km">39–41 كم</span>
+            </div>
+            <div class="big-city-item">
+                Oostende <span class="arabic" style="font-weight:400;">أوستنده</span>
+                <span class="km">~ 48 كم</span>
+            </div>
+        </div>
+
+        <!-- النصيحة -->
+        <div class="advice-box">
+            <h3>نصيحة للباحثين عن عمل</h3>
+            <p>
+                لو بتدور على شغل، ركّز أولًا على <strong>Kortrijk</strong> و<strong>Waregem</strong> 
+                و<strong>Wevelgem</strong> و<strong>Izegem</strong> و<strong>Roeselare</strong>، 
+                بالإضافة إلى <strong>هارلبكة</strong> نفسها؛ عشان توسّع نطاق البحث عن وظائف الهندسة الميكانيكية 
+                والتكييف (HVAC) ووظائف الإنتاج المؤقتة.
+            </p>
+        </div>
+
+        <div class="footnote">
+            المسافات تقريبية وقد تختلف حسب الطريق ومكان الانطلاق. المصدر: fr.db-city.com
+        </div>
+    </div>
+</body>
+</html>
