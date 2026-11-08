@@ -2,32 +2,120 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>أماكن الخروج</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخروجات</title>
 <style>
-  body { font-family: Arial, sans-serif; background:#f7f7f7; padding:20px; }
-  h2 { color:#2c3e50; border-bottom:2px solid #3498db; padding-bottom:5px; }
-  ul { background:#fff; padding:15px 30px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-  li { margin:8px 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f4fd 0%, #d6eaf8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+    padding: 30px 24px;
+    max-width: 560px;
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    color: #1a6fa3;
+    font-size: clamp(22px, 6vw, 28px);
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  h1::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #3498db;
+    border-radius: 3px;
+    margin: 12px auto 0;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 24px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f5faff;
+    border: 1px solid #d4e8f7;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: clamp(15px, 4vw, 17px);
+    color: #1f3a4d;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+
+  li:hover {
+    transform: translateX(-6px);
+    box-shadow: 0 4px 15px rgba(26,111,163,0.15);
+    background: #e8f4fd;
+  }
+
+  .num {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #3498db, #1a6fa3);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  /* موبايل */
+  @media (max-width: 480px) {
+    body { padding: 12px; }
+    .card { padding: 22px 16px; border-radius: 16px; }
+    li { padding: 12px; gap: 10px; }
+    .num { width: 30px; height: 30px; font-size: 13px; }
+  }
 </style>
 </head>
 <body>
 
-<h2>ليل فرنسا</h2>
-<ul>
-  <li>١- مول ( أكل ) ( كافيه + أكل تايلاندي )</li>
-  <li>٢- مركب و مطعم أكل</li>
-  <li>٣-</li>
-</ul>
-
-<h2>بروكسل</h2>
-<ul>
-  <li>١- محل أكل ( محل مغربي )</li>
-</ul>
-
-<h2>روتردام</h2>
-<ul>
-  <li>١-</li>
-</ul>
+  <div class="card">
+    <h1>الخروجات</h1>
+    <ul>
+      <li><span class="num">١</span> kfc</li>
+      <li><span class="num">٢</span> كافيه K</li>
+      <li><span class="num">٣</span> مركب ايجار كورتريك في الصيف</li>
+      <li><span class="num">٤</span> جت سكي</li>
+      <li><span class="num">٥</span> فندق ( ليل )</li>
+      <li><span class="num">٦</span> مطعم المصرية ليل</li>
+      <li><span class="num">٧</span> كافيه بون ديا</li>
+      <li><span class="num">٨</span> كافيه برج انتونيون بروكسل</li>
+      <li><span class="num">٩</span> مول ليل سنكحة و كافيه</li>
+      <li><span class="num">١٠</span> مول kfc كافيه</li>
+      <li><span class="num">١١</span> محل الاكل الصحي في كورتيك ( ناصية )</li>
+      <li><span class="num">١٢</span> اكل صيني في اي مكان</li>
+      <li><span class="num">١٣</span> اكل مغربي في اي مكان</li>
+      <li><span class="num">١٤</span> اوبن بوفيه فرنسا سمك</li>
+      <li><span class="num">١٥</span> اكل تايلاندي في اي مكان</li>
+      <li><span class="num">١٦</span> اكل تركي في اي مكان</li>
+      <li><span class="num">١٧</span> مطعم السوق خنت سندوتشات</li>
+    </ul>
+  </div>
 
 </body>
 </html>
